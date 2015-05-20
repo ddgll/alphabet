@@ -1,0 +1,152 @@
+/* Empty. Add your own CSS if you like */
+
+.searched-letter, .begin, .end{
+	width: 85%;
+	height: 0;
+	text-align: center;
+	position: relative;
+	padding-bottom: 85%;
+	background-position: center center ! important;
+	background-size: contain ! important;
+	background-repeat: no-repeat ! important;
+}
+
+.searched-letter{
+	margin: 0 0 0 10%;	
+}
+
+.begin, .end{
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	margin-bottom: 3em;
+}
+
+.begin{
+	background-image: url('../img/parot-come.gif') ! important;
+}
+.end{
+	background-image: url('../img/parot-bye.gif') ! important;
+}
+.searched-letter img{
+	position: absolute;
+	bottom: 20px;
+	left: 25%;
+	right: 0;
+}
+.win, .loose{
+	padding-top: 5%;
+	text-align: left;
+}
+.loose h3, .win h3{
+	position: absolute;
+	top: 5%;
+	left: 0;
+	right: 0;
+	font-size: 2.8em;
+	font-weight: bold;
+	color: #eb949a;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+.win h3{
+	font-size: 4em;
+}
+.end h4{
+	position: absolute;
+	bottom: 1em;
+	left: 0;
+	right: 0;
+	font-size: 3em;
+	text-align: center;
+	color: #ffb0b0;
+}
+.win h3{
+	color: #02d988;
+}
+.begin h4, .end h4{
+	color: #02d988;
+}
+.score{
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+}
+
+.pieces{
+	z-index: 99;
+	padding-bottom: 100%;
+	width: 100%;
+	height: 0;
+	position: relative;
+}
+.pieces img, .pieces .current{
+	position: absolute;
+	left: 20%;
+	width: 50%;
+}
+.pieces .current{
+	top: 32%;
+	font-size: 3em;
+	color: #dedede;
+	width: 50%;
+	left: -10%;
+	text-align: center;
+}
+
+.ile{
+	background-image: url('../img/palmier-mitch.png') ! important;
+  	background-position: left bottom ! important;
+  	background-size: auto 100% ! important;
+  	background-repeat: no-repeat ! important;
+}
+
+.tresor-bg{
+	z-index: 98;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	background-image: url('../img/tresor.png') ! important;
+  	background-position: right top ! important;
+  	background-size: contain ! important;
+  	background-repeat: no-repeat ! important;
+}
+
+.keypad-view{
+  	z-index: 1500;
+  	background: none;
+  	background-image: url('../img/keypad-bg.jpg') ! important;
+  	background-position: center center ! important;
+  	background-size: cover ! important;
+  	background-repeat: no-repeat ! important;
+}
+
+.keypad{
+  position: absolute;
+  width: 90%;
+  right: 5%;
+  bottom: 15px;
+}
+
+.keypad .col{
+  text-align: center;
+}
+.keypad .col .button{
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  min-width: 60px;
+  min-height: 60px;
+  border-color: #cecccd;
+  font-size: 3em;
+  color: #7a7a7a;
+  background-color: #e7e7e7;
+}
+
+.keypad .col .button:active{
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: -10px;
+  min-width: 80px;
+  min-height: 80px;
+  font-size: 3.8em;
+  color: #aeaeae;
+}

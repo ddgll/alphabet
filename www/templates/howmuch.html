@@ -1,0 +1,40 @@
+<ion-view view-title="Combien vois-tu de..." class="keypad-view">
+	<div class="begin" ng-show="begin">
+		<h4>Trouve le tr&eacute;sor en cherchant les lettres</h4>
+	</div>
+	<div class="end" ng-show="end">
+		<h4>Bravo ! Envolons-nous vers de nouvelles aventures</h4>
+	</div>
+  	<ion-content class="padding ile" ng-hide="begin || end">
+		<div class="row">
+			<div class="col-33 col-top">
+				<div ng-repeat="image in images">
+					<img src="img/{{searchedAnimal.code}}.png" class="img-animal" style="{{image}}">
+				</div>
+				<div class="win" ng-show="win">
+					<h3>Bravo !</h3>
+				</div>
+				<div class="loose" ng-show="loose">
+					<h3>Loup&eacute; !<br>Continue de chercher</h3>
+				</div>
+			</div>
+			<div class="col-67">
+				<div class="row score">
+					<div class="col-25 pieces">
+						<img src="img/piece.png" ng-repeat="piece in pieces" style="margin-left: {{piece.margin}}px; top: {{piece.top}}%;">
+						<div class="current" ng-show="score">{{score}}</div>
+					</div>
+					<div class="col-75 tresor-bg">
+					</div>
+				</div>
+			</div>
+		</div>
+  	</ion-content>
+	<div class="keypad" ng-hide="begin || end">
+		<div class="row" ng-repeat="line in letters">
+			<div class="col" ng-repeat="letter in line">
+				<button class="button button-letter" ng-if="letter.minuscule.length > 0" ng-click="letterTouched(letter)">{{letter.majuscule}}</button>
+			</div>
+		</div>
+	</div>
+</ion-view>
